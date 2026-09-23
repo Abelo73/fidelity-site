@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
-import { Sparkles, PhoneCall, MapPin, CheckCircle2, ShieldCheck, ArrowRight, PackageCheck } from "lucide-react";
+import { Sparkles, PhoneCall, MapPin, CheckCircle2, ShieldCheck, ArrowRight, PackageCheck, Navigation } from "lucide-react";
 
 export default function FurniturePage() {
   const { t } = useLanguage();
@@ -211,15 +211,29 @@ export default function FurniturePage() {
             </h3>
           </div>
           
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            href="tel:0911971800"
-            className="px-6 py-3.5 rounded-2xl bg-[#C5A880] hover:bg-[#B08D57] text-neutral-950 font-bold text-xs shadow-lg transition-all z-10 shrink-0 flex items-center gap-2"
-          >
-            <PhoneCall className="w-4 h-4" />
-            0911 97 18 00
-          </motion.a>
+          <div className="flex flex-wrap items-center gap-3 z-10">
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="https://www.google.com/maps/place/Green+Land+Hotel/@6.8630342,37.7569704,17z/data=!3m1!4b1!4m6!3m5!1s0x17b1b083bf37f165:0xb8de2aac2c40782c!8m2!3d6.8630289!4d37.7595453!16s%2Fg%2F11b7q5_9lj?entry=ttu"
+              target="_blank"
+              rel="noreferrer"
+              className="px-5 py-3.5 rounded-2xl bg-[#C5A880] hover:bg-[#B08D57] text-neutral-950 font-bold text-xs shadow-lg transition-all flex items-center gap-2"
+            >
+              <Navigation className="w-4 h-4" />
+              Navigate on Google Maps
+            </motion.a>
+
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="tel:0911971800"
+              className="px-5 py-3.5 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs border border-white/20 transition-all flex items-center gap-2"
+            >
+              <PhoneCall className="w-4 h-4 text-[#C5A880]" />
+              0911 97 18 00
+            </motion.a>
+          </div>
         </motion.div>
 
       </div>

@@ -3,11 +3,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
-import { PhoneCall, Mail, MapPin, Send, CheckCircle2, Building, Sparkles } from "lucide-react";
+import { PhoneCall, Mail, MapPin, Send, CheckCircle2, Building, Sparkles, Navigation, Compass, ExternalLink } from "lucide-react";
 
 export default function ContactPage() {
   const { t } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
+
+  const googleMapsUrl =
+    "https://www.google.com/maps/place/Green+Land+Hotel/@6.8630342,37.7569704,17z/data=!3m1!4b1!4m6!3m5!1s0x17b1b083bf37f165:0xb8de2aac2c40782c!8m2!3d6.8630289!4d37.7595453!16s%2Fg%2F11b7q5_9lj?entry=ttu";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -122,6 +125,14 @@ export default function ContactPage() {
                     {t("contact_loc2_name")}
                   </div>
                   <div className="text-neutral-700 font-sans">{t("contact_loc2_desc")}</div>
+                  <a
+                    href={googleMapsUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 pt-2 text-[#B08D57] font-bold hover:underline"
+                  >
+                    <Navigation className="w-3.5 h-3.5" /> Navigate via Google Maps →
+                  </a>
                 </div>
               </div>
             </div>
@@ -225,6 +236,96 @@ export default function ContactPage() {
           </motion.div>
 
         </div>
+
+        {/* Dedicated Interactive Google Map & Step-by-Step Directions Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="bg-white border border-neutral-200 rounded-3xl p-6 sm:p-10 space-y-8 shadow-2xl relative overflow-hidden"
+        >
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-neutral-100">
+            <div className="space-y-2">
+              <span className="text-xs font-mono text-[#B08D57] font-bold uppercase tracking-widest block flex items-center gap-1.5">
+                <Compass className="w-4 h-4 text-[#B08D57]" />
+                Interactive Workshop Map & Navigation Guide
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 font-display">
+                Visit Our Showroom & Workshop in Wolaita Sodo
+              </h2>
+              <p className="text-xs text-neutral-600 font-sans">
+                Located in Greenland Sefer near Green Land Hotel & Hodiye Garage (ወላይታ ሶዶ - ግሪንላንድ ሰፈር፣ ሆድዬ ጋራዥ አጠገብ).
+              </p>
+            </div>
+
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href={googleMapsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="px-6 py-3.5 rounded-2xl bg-neutral-900 hover:bg-neutral-800 text-white font-bold text-xs shadow-lg transition-all flex items-center gap-2 shrink-0"
+            >
+              <Navigation className="w-4 h-4 text-[#C5A880]" />
+              Open Live Google Maps Navigation
+              <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+            </motion.a>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            {/* Embedded Interactive Map Frame */}
+            <div className="lg:col-span-8 rounded-2xl overflow-hidden border border-neutral-200 shadow-inner h-[380px] sm:h-[420px] relative bg-neutral-100">
+              <iframe
+                title="Fidelity Business Group Location - Green Land Hotel Wolaita Sodo"
+                src="https://maps.google.com/maps?q=6.8630289,37.7595453&hl=en&z=17&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full grayscale-[20%] contrast-[105%]"
+              />
+              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-4 py-2 rounded-xl border border-neutral-200 text-xs font-mono font-bold text-neutral-900 shadow-lg flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
+                <span>📍 Green Land Hotel / Greenland Sefer, Sodo</span>
+              </div>
+            </div>
+
+            {/* Navigation Directions Cards */}
+            <div className="lg:col-span-4 space-y-4">
+              <h3 className="text-base font-bold text-neutral-900 font-display flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-[#B08D57]" />
+                Navigation Cues & Direct Landmarks
+              </h3>
+
+              <div className="space-y-3 text-xs font-sans">
+                <div className="p-4 rounded-2xl bg-neutral-50 border border-neutral-200 space-y-1">
+                  <span className="font-mono text-[10px] text-[#B08D57] font-bold block uppercase">Primary Landmark 01</span>
+                  <div className="font-bold text-neutral-900">Green Land Hotel (ግሪንላንድ ሆቴል)</div>
+                  <p className="text-neutral-500 leading-relaxed">Located precisely at coordinates 6.8630° N, 37.7595° E in Wolaita Sodo.</p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-neutral-50 border border-neutral-200 space-y-1">
+                  <span className="font-mono text-[10px] text-[#B08D57] font-bold block uppercase">Workshop Entrance 02</span>
+                  <div className="font-bold text-neutral-900">Hodiye Garage (ሆድዬ ጋራዥ አጠገብ)</div>
+                  <p className="text-neutral-500 leading-relaxed">Our Solid Wanza wood workshop & furniture showroom is adjacent to Hodiye Garage.</p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200 space-y-1">
+                  <span className="font-mono text-[10px] text-amber-800 font-bold block uppercase">Direct Assistance Hotline</span>
+                  <div className="font-bold text-neutral-900">Lost on your way? Call us!</div>
+                  <a href="tel:0911971800" className="text-amber-900 font-mono font-bold hover:underline block pt-0.5">
+                    📞 0911 97 18 00 / 0916 41 12 37
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </motion.div>
 
       </div>
     </div>
