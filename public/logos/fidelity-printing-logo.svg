@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 350" width="100%" height="100%">
+  <defs>
+    <linearGradient id="printing-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <filter id="shadow-gold" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#D97706" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(40, 40)" filter="url(#shadow-gold)">
+    <!-- Printing Press Roller & Curling Sheet Graphic -->
+    <g transform="translate(145, 110)">
+      <!-- Roller Axle -->
+      <rect x="-10" y="-55" width="20" height="110" fill="#4B5563" rx="4" />
+      <!-- Printing Cylinder -->
+      <rect x="-6" y="-45" width="12" height="90" fill="#9CA3AF" rx="2" />
+      <!-- Curling Yellow Sheet / Paper Banner -->
+      <path d="M0,-40 C45,-35 45,20 8,35 C-20,45 25,65 50,50 L45,40 C25,50 -5,35 15,25 C45,10 35,-30 0,-30 Z" fill="url(#printing-gold)" />
+      <!-- Top Bracket -->
+      <circle cx="0" cy="-50" r="8" fill="#1F2937" />
+      <circle cx="0" cy="50" r="8" fill="#1F2937" />
+    </g>
+
+    <!-- Stylized Golden 'F' Wing -->
+    <path d="M30,185 L30,55 L135,15 L135,50 L70,75 L125,105 L125,135 L70,105 L70,185 Z" fill="url(#printing-gold)" />
+
+    <!-- Outer Gold Frame for Text -->
+    <rect x="220" y="45" width="580" height="110" fill="none" stroke="#D97706" stroke-width="4" rx="6" />
+
+    <!-- Text Group -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+      <text x="245" y="92" font-size="32" font-weight="900" letter-spacing="2" fill="#B45309">FIDELITY PRINTING</text>
+      <text x="245" y="132" font-size="26" font-weight="800" letter-spacing="1.5" fill="#D97706">&amp; ADVERTISING</text>
+      <text x="460" y="195" font-size="28" font-style="italic" font-weight="700" fill="#B45309">Stand out!</text>
+    </g>
+  </g>
+</svg>

@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏛️ Fidelity Business Group | Fidel The Architect
 
-## Getting Started
+Official web application portal for **Fidelity Business Group** and **Architect Fidel Gebremedhin** — an Ethio-Architectural Enterprise integrating Architectural Design & Supervision, Custom 100% Solid Wanza Wood Furniture Craftsmanship, Commercial Printing & Advertising, and Academic Lectureship.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8?style=for-the-badge&logo=tailwind-css)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-60fps-purple?style=for-the-badge&logo=framer)
+![License](https://img.shields.io/badge/License-Proprietary-gold?style=for-the-badge)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🌟 Key Features
+
+- **🏛️ OpenVPN-Inspired Centered Architectural Hero**: High-impact modern headline typography (`Outfit` & `Cormorant Garamond`), dynamic mouse-tracking gold/emerald radial glow, floating 3D wireframe geometry, and visual diagram nodes.
+- **🔄 Infinite Fading Horizontal Ticker**: Smooth horizontal marquee showcasing trusted partners (*EiABC*, *Wolaita Sodo University*, *Fidelity Architects*, *Fidelity Furniture*, *Fidelity Printing*, *SOS Hermann Gmeiner School*).
+- **🌐 Bilingual Internationalization (EN | አማርኛ)**: Instant toggle between English and Amharic (`useLanguage` React Context) across all titles, project descriptions, tags, testimonials, and contact CTAs.
+- **🏗️ Real Built Projects Showcase**:
+  - **The Leaning Tower (የዘመናዊ ማማ)** — G+1 Residential Villa Architecture in Wolaita Sodo.
+  - **DICHA BOYS Store Design & Branding** — Commercial retail interior collaboration with **Adonay Mada (@adonay_official)** for youth hustlers.
+  - **Solid Wanza Living Suite** — Architect-designed 100% pure Ethiopian Wanza wood round coffee tables (`#ክብ_የቡና_ጠረጴዛ`) and bedroom suites.
+- **🖼️ Interactive Filterable Projects Gallery**: Filter projects by *Architecture & Supervision*, *Interior & Commercial*, and *Solid Wanza Furniture*, with interactive popup specification modals.
+- **💬 Creator & Partner Testimonials**: Featuring Ethiopian TikToker **Adonay Mada**, real estate developers, and academic faculty members.
+- **🎬 60fps Animated Executive Timeline**: Interactive career timeline on the About page mapping Fidel Gebremedhin's journey across EiABC, WSU, and executive leadership.
+
+---
+
+## 🛠️ Technology Stack
+
+| Category | Technology / Library |
+| :--- | :--- |
+| **Framework** | [Next.js 16](https://nextjs.org/) (App Router & Turbopack) |
+| **Language** | [TypeScript](https://www.typescriptlang.org/) |
+| **Styling** | [Tailwind CSS v4](https://tailwindcss.com/) & Custom Utility Layers |
+| **Animations** | [Framer Motion](https://www.framer.com/motion/) (GPU-accelerated 60fps transforms) |
+| **Typography** | `Outfit`, `Cormorant Garamond`, `Plus Jakarta Sans`, `Space Mono` (via `next/font/google`) |
+| **Icons** | [Lucide React](https://lucide.dev/) |
+
+---
+
+## 📁 Project Structure
+
+```text
+fidelity-site/
+├── app/
+│   ├── about/              # Executive Profile & 60fps Animated Timeline
+│   ├── architects/         # Fidelity Architects Division & Master Planning
+│   ├── components/         # Modular Animated UI Components
+│   │   ├── AnimatedCounter.tsx
+│   │   ├── CtaBanner.tsx
+│   │   ├── ExpandedProjectsGallery.tsx
+│   │   ├── HeroSection.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── ProductShowcase.tsx
+│   │   ├── ProjectsShowcase.tsx
+│   │   ├── TestimonialSection.tsx
+│   │   ├── TrustedTicker.tsx
+│   │   └── WireframeGeometry.tsx
+│   ├── contact/            # Direct Phone & Location Information
+│   ├── context/            # LanguageContext (Amharic & English Translations)
+│   ├── furniture/          # Custom Wanza Furniture Showcase
+│   ├── gallery/            # Master Architectural Media Gallery
+│   ├── printing/           # Fidelity Printing & Advertising Services
+│   ├── globals.css         # Blueprint grid patterns & theme tokens
+│   ├── layout.tsx          # RootLayout with fonts & LanguageProvider
+│   └── page.tsx            # Main Landing Portal Page
+├── public/                 # Logos, High-Resolution Portraits & Media
+├── package.json            # Project dependencies
+├── tsconfig.json           # TypeScript configuration
+└── README.md               # GitHub documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
 
-## Learn More
+Ensure you have **Node.js 18+** installed on your machine.
 
-To learn more about Next.js, take a look at the following resources:
+### Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/fidelity-site.git
+   cd fidelity-site
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📦 Production Build & Deployment
+
+To validate TypeScript and build the production bundle:
+
+```bash
+npm run build
+npm run start
+```
+
+### Deploying to GitHub & Vercel
+
+```bash
+# Add changes & commit
+git add .
+git commit -m "feat: complete modern ethio-architectural portal with 60fps animations & bilingual i18n"
+
+# Push to GitHub
+git push origin main
+```
+
+---
+
+## 📞 Business Contacts
+
+- **Founder & CEO**: Fidel Gebremedhin (Architect, Entrepreneur & Lecturer)
+- **Direct Telephone**: `+251 91 197 1800` | `+251 91 641 1237`
+- **Locations**: Addis Ababa & Wolaita Sodo (Greenland Sefer, near Hodiye Garage), Ethiopia.

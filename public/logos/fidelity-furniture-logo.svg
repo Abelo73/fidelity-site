@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 350" width="100%" height="100%">
+  <defs>
+    <linearGradient id="furniture-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="50%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <filter id="shadow-teal" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#047857" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(40, 40)" filter="url(#shadow-teal)">
+    <!-- Saw Blade Outer Circle with Teeth -->
+    <g transform="translate(140, 115)">
+      <!-- Saw Teeth Circle -->
+      <path d="
+        M0,-70 L8,-65 L5,-55 L16,-52 L22,-44 L16,-36 L28,-30 L32,-20 L24,-14 L36,-5 L37,6 L27,10 L36,21 L34,31 L23,32 
+        L29,44 L24,53 L13,51 L16,63 L8,70 L-3,65 L-8,76 L-18,69 L-21,57 L-31,58 L-37,47 L-28,40 L-40,30 L-43,18
+        L-33,14 L-44,2 L-42,-9 L-32,-11 L-40,-23 L-35,-33 L-24,-31 L-29,-44 L-20,-51 L-11,-46 L-13,-59 Z" 
+        fill="#065F46" />
+      <!-- Inner Ring cutouts -->
+      <circle cx="0" cy="0" r="45" fill="#047857" opacity="0.4" />
+      <circle cx="0" cy="0" r="25" fill="#FFFFFF" />
+      <circle cx="0" cy="0" r="10" fill="#065F46" />
+    </g>
+
+    <!-- Stylized Emerald 'F' Wing Overlay -->
+    <path d="M30,185 L30,55 L135,15 L135,50 L70,75 L125,105 L125,135 L70,105 L70,185 Z" fill="url(#furniture-teal)" />
+
+    <!-- Text Background Banner -->
+    <rect x="235" y="55" width="560" height="75" fill="#064E3B" rx="8" />
+
+    <!-- Text Group -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+      <text x="255" y="90" font-size="28" font-weight="900" letter-spacing="1.5" fill="#FFFFFF">FIDELITY FURNITURE</text>
+      <text x="255" y="118" font-size="24" font-weight="800" letter-spacing="1" fill="#A7F3D0">&amp; INTERIOR DESIGN</text>
+      <text x="440" y="175" font-size="26" font-style="italic" font-weight="600" fill="#047857">for elegant spaces!</text>
+    </g>
+  </g>
+</svg>

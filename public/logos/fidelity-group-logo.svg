@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="silver-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2E8F0" />
+      <stop offset="35%" stop-color="#94A3B8" />
+      <stop offset="70%" stop-color="#475569" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="silver-highlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#64748B" />
+    </linearGradient>
+    <filter id="subtle-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Group Emblem Symbol -->
+  <g transform="translate(400, 160)" filter="url(#subtle-shadow)">
+    <!-- Left Pillar Wing -->
+    <path d="M-110,90 L-110,-10 L-60,-80 L-10,-20 L-10,90 L-45,90 L-45,15 L-60,-10 L-75,15 L-75,90 Z" fill="url(#silver-metal)" />
+    <path d="M-110,-10 L-60,-80 L-10,-20 L-45,15 L-60,-10 L-75,15 Z" fill="url(#silver-highlight)" opacity="0.8" />
+    
+    <!-- Right Pillar Wing (Symmetrical Mirror) -->
+    <path d="M110,90 L110,-10 L60,-80 L10,-20 L10,90 L45,90 L45,15 L60,-10 L75,15 L75,90 Z" fill="url(#silver-metal)" />
+    <path d="M110,-10 L60,-80 L10,-20 L45,15 L60,-10 L75,15 Z" fill="url(#silver-highlight)" opacity="0.8" />
+    
+    <!-- Central Crest / Crown Shield -->
+    <path d="M0,-115 L35,-85 L35,-45 L0,-25 L-35,-45 L-35,-85 Z" fill="url(#silver-metal)" />
+    <path d="M0,-115 L35,-85 L0,-25 Z" fill="url(#silver-highlight)" opacity="0.6" />
+  </g>
+
+  <!-- Typography -->
+  <g text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+    <!-- Main Title -->
+    <text x="400" y="340" font-size="34" font-weight="900" letter-spacing="3" fill="#0F172A">FIDELITY BUSINESS GROUP</text>
+    <!-- Tagline -->
+    <text x="400" y="385" font-size="22" font-style="italic" font-weight="500" letter-spacing="1" fill="#475569">From thought to Empire!</text>
+  </g>
+</svg>
