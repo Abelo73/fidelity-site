@@ -127,3 +127,15 @@ git push origin main
 - **Founder & CEO**: Fidel Gebremedhin (Architect, Entrepreneur & Lecturer)
 - **Direct Telephone**: `+251 91 197 1800` | `+251 91 641 1237`
 - **Locations**: Addis Ababa & Wolaita Sodo (Greenland Sefer, near Hodiye Garage), Ethiopia.
+
+---
+
+## 👨‍💻 Web Engineering & Software Developer
+
+Built & Engineered with precision by **Abel Adisu** (Software Developer).
+
+- **Phone / Direct Contact**: `0934 77 78 43` / `+251 93 477 7843`
+- **Portfolio Website**: [that-is-me.onrender.com](https://that-is-me.onrender.com/)
+- **LinkedIn Profile**: [linkedin.com/in/abeladisunugatu](https://www.linkedin.com/in/abeladisunugatu/)
+- **Instagram**: [@abelo_73](https://www.instagram.com/abelo_73/)
+
