@@ -139,6 +139,9 @@ const translations: Record<Language, Record<string, string>> = {
     furn_p3_badge: "Bedroom & Living Suites",
     furn_p3_title: "Handcrafted Storage Beds & Wardrobes",
     furn_p3_desc: "Under-bed hydraulic storage mechanisms, custom headboards, and space-saving wardrobes blending modern design with traditional Ethiopian joinery.",
+    furn_tv_badge: "#for_elegant_spaces!",
+    furn_tv_title: "Decorate Small Spaces With Modern Style! (Modern TV Stand)",
+    furn_tv_desc: "This Fidelity Furniture’s TV stand is the ideal choice for keeping all your electronics organized without taking up too much room.",
     furn_workshop_loc: "Showroom & Workshop Location",
     furn_workshop_addr: "Wolaita Sodo - Greenland Sefer, near Hodiye Garage (ወላይታ ሶዶ - ግሪንላንድ ሰፈር ሆድዬ ጋራዥ አጠገብ)",
 
@@ -306,6 +309,9 @@ const translations: Record<Language, Record<string, string>> = {
     furn_p3_badge: "የመኝታ እና የሳሎን እቃዎች",
     furn_p3_title: "የመኝታ አልጋዎች እና የልብስ ቁምሳጥኖች",
     furn_p3_desc: "ከአልጋ ስር እቃ ማስቀመጫ ያላቸው hydrolic አልጋዎች፣ የልብስ ቁምሳጥኖች እና ዘመናዊ ዲዛይን ከሀገር በቀል የዋንዛ ጥበብ ጋር።",
+    furn_tv_badge: "#ለቄንጠኛ_ስፍራዎች!",
+    furn_tv_title: "ጠባብ ቦታን በዘመናዊ ስታይል ያስውቡ! (የቲቪ ስታንድ)",
+    furn_tv_desc: "ይህ የፊደሊቲ ፈርኒቸር የቲቪ ስታንድ ብዙ ቦታ ሳይይዝ ሁሉንም የኤሌክትሮኒክስ ዕቃዎችዎን በሥርዓት ለመያዝ ተመራጭ ነው።",
     furn_workshop_loc: "የእቃዎች ማሳያ እና ዎርክሾፕ አድራሻ",
     furn_workshop_addr: "ወላይታ ሶዶ - ግሪንላንድ ሰፈር ሆድዬ ጋራዥ አጠገብ (Wolaita Sodo - Greenland Sefer)",
 

@@ -21,6 +21,17 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
+    title: "Modern Small Space TV Stand (#ለቄንጠኛ_ስፍራዎች!)",
+    category: "furniture",
+    badge: "#ለቄንጠኛ_ስፍራዎች!",
+    image: "/images/fidelity-tv-stand.png",
+    subtitle: "Fidelity Furniture & Interior Design",
+    location: "Addis Ababa & Wolaita Sodo",
+    client: "Modern Living Rooms & Apartments",
+    details: "Decorate small spaces with modern style! Designed to keep all electronic devices organized without taking up space.",
+  },
+  {
+    id: 2,
     title: "Pure Wanza Solid Wood Coffee Table (#ክብ_የቡና_ጠረጴዛ)",
     category: "furniture",
     badge: "#ክብ_የቡና_ጠረጴዛ",

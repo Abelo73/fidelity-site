@@ -125,6 +125,50 @@ export default function FurniturePage() {
             <p className="text-neutral-500 text-xs sm:text-sm font-sans">{t("furn_catalog_desc")}</p>
           </div>
 
+          {/* Featured TV Stand Spotlight Banner */}
+          <motion.div
+            whileHover={{ y: -4 }}
+            className="bg-neutral-900 text-white rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+          >
+            <div className="lg:col-span-7 space-y-5">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C5A880]/20 border border-[#C5A880]/40 text-[#C5A880] text-xs font-mono font-bold">
+                <Sparkles className="w-3.5 h-3.5" />
+                {t("furn_tv_badge")}
+              </div>
+              
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display">
+                {t("furn_tv_title")}
+              </h3>
+
+              <p className="text-neutral-300 text-xs sm:text-sm font-sans leading-relaxed">
+                {t("furn_tv_desc")}
+              </p>
+
+              <div className="flex flex-wrap gap-4 pt-2">
+                <motion.a
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="tel:0911971800"
+                  className="px-6 py-3 rounded-2xl bg-[#C5A880] hover:bg-[#B08D57] text-neutral-950 font-bold text-xs shadow-lg transition-all flex items-center gap-2"
+                >
+                  <PhoneCall className="w-4 h-4" /> Order Now: 0911 97 18 00
+                </motion.a>
+                <a
+                  href="tel:0916411237"
+                  className="px-6 py-3 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs border border-white/20 transition-all flex items-center gap-2"
+                >
+                  <PhoneCall className="w-4 h-4 text-[#C5A880]" /> 0916 41 12 37
+                </a>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="w-full aspect-square relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                <Image src="/images/fidelity-tv-stand.png" alt="Fidelity TV Stand for Small Spaces" fill className="object-cover" />
+              </div>
+            </div>
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* Item 1 */}
