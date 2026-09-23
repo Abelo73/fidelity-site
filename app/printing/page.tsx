@@ -1,104 +1,189 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { useLanguage } from "../context/LanguageContext";
+import { Printer, PhoneCall, Send, Sparkles, Layers, Image as ImageIcon, ShieldCheck } from "lucide-react";
 
 export default function PrintingPage() {
+  const { t } = useLanguage();
+
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16 bg-white">
-      
-      {/* Hero */}
-      <div className="bg-neutral-50 border border-neutral-200 rounded-3xl p-8 sm:p-12 relative overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          <div className="lg:col-span-7 space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 relative rounded-xl border border-neutral-200 bg-white overflow-hidden shadow-sm">
-                <Image src="/logos/fidelity-printing.png" alt="Fidelity Printing Logo" fill className="object-cover" />
+    <div className="min-h-screen bg-white text-neutral-900 pt-24 pb-20 relative overflow-hidden bg-blueprint-grid">
+      {/* Background Soft Glows */}
+      <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-[#C5A880]/10 blur-[140px] pointer-events-none rounded-full" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 relative z-10">
+        
+        {/* Hero Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="bg-white/80 backdrop-blur-xl border border-neutral-200 rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-2xl shadow-neutral-200/50"
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <div className="lg:col-span-7 space-y-6">
+              <div className="flex items-center gap-3">
+                <motion.div
+                  whileHover={{ scale: 1.05, rotate: -3 }}
+                  className="w-14 h-14 relative rounded-2xl border border-neutral-200 bg-white overflow-hidden shadow-md p-1.5"
+                >
+                  <Image src="/logos/fidelity-printing.png" alt="Fidelity Printing Logo" fill className="object-cover rounded-xl" />
+                </motion.div>
+                <div>
+                  <span className="text-xs font-mono text-[#B08D57] font-bold uppercase tracking-widest block flex items-center gap-1.5">
+                    <Printer className="w-3.5 h-3.5" />
+                    {t("print_badge")}
+                  </span>
+                  <h1 className="text-2xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight font-display">
+                    {t("print_title")}
+                  </h1>
+                </div>
               </div>
-              <div>
-                <span className="text-xs font-mono text-neutral-500 font-bold uppercase tracking-wider block">
-                  Media & Advertising Collateral
-                </span>
-                <h1 className="text-2xl sm:text-3xl font-extrabold text-neutral-900">
-                  Fidelity Printing & Advertising
-                </h1>
+
+              <div className="space-y-1 border-l-2 border-[#C5A880] pl-4">
+                <p className="text-neutral-900 text-lg font-serif italic font-bold">{t("print_motto")}</p>
+                <p className="text-neutral-500 text-xs font-mono font-semibold uppercase tracking-wider">High Precision Print & Outdoor Signage</p>
+              </div>
+
+              <p className="text-neutral-600 text-sm leading-relaxed font-sans">
+                {t("print_bio")}
+              </p>
+
+              <div className="flex flex-wrap gap-4 pt-2">
+                <motion.a
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  href="tel:0911971800"
+                  className="px-6 py-3.5 rounded-2xl bg-neutral-900 hover:bg-neutral-800 text-white font-bold text-xs transition-all flex items-center gap-2.5 shadow-lg shadow-neutral-900/20"
+                >
+                  <PhoneCall className="w-4 h-4 text-[#C5A880]" />
+                  {t("print_cta_quote")}
+                </motion.a>
+
+                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                  <Link
+                    href="/contact"
+                    className="px-6 py-3.5 rounded-2xl bg-neutral-100 hover:bg-neutral-200 text-neutral-900 border border-neutral-200 text-xs font-bold transition-all flex items-center gap-2"
+                  >
+                    <Send className="w-4 h-4 text-neutral-600" />
+                    {t("print_cta_desk")}
+                  </Link>
+                </motion.div>
               </div>
             </div>
 
-            <div className="space-y-1">
-              <p className="text-neutral-900 text-lg font-mono italic font-bold">&ldquo;Stand out!&rdquo;</p>
-            </div>
-
-            <p className="text-neutral-600 text-sm leading-relaxed">
-              General Managed by Fidel Gebremedhin since September 2021. 
-              We empower businesses, institutions, and brands across Ethiopia to capture market leadership through high-precision commercial printing, illuminated signage, and strategic advertising media.
-            </p>
-
-            <div className="flex flex-wrap gap-4 pt-2">
-              <a
-                href="tel:0911971800"
-                className="px-6 py-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white font-bold text-xs transition-all flex items-center gap-2 shadow-md"
+            {/* Showcase 3D Logo Card */}
+            <div className="lg:col-span-5 flex justify-center">
+              <motion.div
+                whileHover={{ y: -8, rotateY: -5 }}
+                transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                className="w-72 h-72 sm:w-80 sm:h-80 relative rounded-3xl overflow-hidden border border-neutral-200 shadow-2xl bg-white p-6 flex flex-col justify-between group"
               >
-                Request Print Quote: 0911 97 18 00
-              </a>
-              <Link
-                href="/contact"
-                className="px-6 py-3 rounded-xl bg-white hover:bg-neutral-100 text-neutral-900 border border-neutral-200 text-xs font-bold transition-all"
-              >
-                Contact Advertising Desk
-              </Link>
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold text-[#B08D57] uppercase tracking-wider">High Resolution Media</span>
+                  <Sparkles className="w-5 h-5 text-[#B08D57]" />
+                </div>
+                <div className="relative w-full h-44 rounded-2xl overflow-hidden my-auto border border-neutral-100 shadow-inner">
+                  <Image src="/logos/fidelity-printing.png" alt="Printing Emblem Render" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                </div>
+                <div className="flex items-center justify-between text-xs font-mono text-neutral-500 font-bold">
+                  <span>SINCE SEP 2021</span>
+                  <span>COMMERCIAL MEDIA</span>
+                </div>
+              </motion.div>
             </div>
+
+          </div>
+        </motion.div>
+
+        {/* Capabilities Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="space-y-10"
+        >
+          <div className="text-center max-w-2xl mx-auto space-y-3">
+            <span className="text-xs font-mono text-[#B08D57] font-bold uppercase tracking-widest block">
+              Commercial Advertising Media
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-neutral-900 font-display">
+              {t("print_services_title")}
+            </h2>
+            <p className="text-neutral-500 text-xs sm:text-sm font-sans">{t("print_services_desc")}</p>
           </div>
 
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="w-64 h-64 sm:w-80 sm:h-80 relative rounded-3xl overflow-hidden border border-neutral-200 shadow-xl bg-white">
-              <Image src="/logos/fidelity-printing.png" alt="Logo Render" fill className="object-cover" />
-            </div>
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            {/* Capability 1 */}
+            <motion.div
+              whileHover={{ y: -6 }}
+              className="p-8 rounded-3xl bg-white border border-neutral-200 space-y-5 hover:border-[#C5A880] hover:shadow-xl transition-all relative overflow-hidden group"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-neutral-900 text-[#C5A880] flex items-center justify-center font-bold text-lg shadow-md group-hover:bg-[#C5A880] group-hover:text-neutral-900 transition-colors">
+                <Layers className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-extrabold text-neutral-900 font-display">
+                {t("print_s1_title")}
+              </h3>
+              <p className="text-xs text-neutral-600 leading-relaxed font-sans">
+                {t("print_s1_desc")}
+              </p>
+              <div className="pt-2 flex items-center gap-2 text-[11px] font-mono font-bold text-[#B08D57]">
+                <span>Weatherproof 3D Letters</span>
+                <span>→</span>
+              </div>
+            </motion.div>
 
-        </div>
+            {/* Capability 2 */}
+            <motion.div
+              whileHover={{ y: -6 }}
+              className="p-8 rounded-3xl bg-white border border-neutral-200 space-y-5 hover:border-[#C5A880] hover:shadow-xl transition-all relative overflow-hidden group"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-neutral-900 text-[#C5A880] flex items-center justify-center font-bold text-lg shadow-md group-hover:bg-[#C5A880] group-hover:text-neutral-900 transition-colors">
+                <ImageIcon className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-extrabold text-neutral-900 font-display">
+                {t("print_s2_title")}
+              </h3>
+              <p className="text-xs text-neutral-600 leading-relaxed font-sans">
+                {t("print_s2_desc")}
+              </p>
+              <div className="pt-2 flex items-center gap-2 text-[11px] font-mono font-bold text-[#B08D57]">
+                <span>Textured Cards & Apparel</span>
+                <span>→</span>
+              </div>
+            </motion.div>
+
+            {/* Capability 3 */}
+            <motion.div
+              whileHover={{ y: -6 }}
+              className="p-8 rounded-3xl bg-white border border-neutral-200 space-y-5 hover:border-[#C5A880] hover:shadow-xl transition-all relative overflow-hidden group"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-neutral-900 text-[#C5A880] flex items-center justify-center font-bold text-lg shadow-md group-hover:bg-[#C5A880] group-hover:text-neutral-900 transition-colors">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-extrabold text-neutral-900 font-display">
+                {t("print_s3_title")}
+              </h3>
+              <p className="text-xs text-neutral-600 leading-relaxed font-sans">
+                {t("print_s3_desc")}
+              </p>
+              <div className="pt-2 flex items-center gap-2 text-[11px] font-mono font-bold text-[#B08D57]">
+                <span>Exhibition Roll-ups & Backdrops</span>
+                <span>→</span>
+              </div>
+            </motion.div>
+
+          </div>
+        </motion.div>
+
       </div>
-
-      {/* Services Grid */}
-      <div className="space-y-8">
-        <div className="text-center max-w-2xl mx-auto space-y-2">
-          <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900">Commercial Advertising & Print Capabilities</h2>
-          <p className="text-neutral-500 text-xs sm:text-sm">High resolution output across all media formats.</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 rounded-2xl bg-white border border-neutral-200 space-y-3 hover:border-neutral-400 hover:shadow-lg transition-all">
-            <div className="w-10 h-10 rounded-xl bg-neutral-900 text-white flex items-center justify-center font-bold text-base">
-              01
-            </div>
-            <h3 className="text-lg font-bold text-neutral-900">Large Format Outdoor Signage</h3>
-            <p className="text-xs text-neutral-600 leading-relaxed">
-              Illuminated 3D channel letters, flex banners, vinyl billboards, and commercial building fascia signs designed to endure weather elements.
-            </p>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-white border border-neutral-200 space-y-3 hover:border-neutral-400 hover:shadow-lg transition-all">
-            <div className="w-10 h-10 rounded-xl bg-neutral-900 text-white flex items-center justify-center font-bold text-base">
-              02
-            </div>
-            <h3 className="text-lg font-bold text-neutral-900">Corporate Identity Collateral</h3>
-            <p className="text-xs text-neutral-600 leading-relaxed">
-              Premium textured business cards, corporate brochures, letterheads, branded apparel, calendars, and promotional giveaway items.
-            </p>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-white border border-neutral-200 space-y-3 hover:border-neutral-400 hover:shadow-lg transition-all">
-            <div className="w-10 h-10 rounded-xl bg-neutral-900 text-white flex items-center justify-center font-bold text-base">
-              03
-            </div>
-            <h3 className="text-lg font-bold text-neutral-900">Event Branding & Exhibition Packaging</h3>
-            <p className="text-xs text-neutral-600 leading-relaxed">
-              Roll-up banners, backdrop walls, booth branding, and high resolution digital offset print materials for expos and conferences.
-            </p>
-          </div>
-        </div>
-      </div>
-
     </div>
   );
 }
-
