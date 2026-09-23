@@ -279,19 +279,28 @@ export default function ContactPage() {
             <div className="lg:col-span-8 rounded-2xl overflow-hidden border border-neutral-200 shadow-inner h-[380px] sm:h-[420px] relative bg-neutral-100">
               <iframe
                 title="Fidelity Business Group Location - Green Land Hotel Wolaita Sodo"
-                src="https://maps.google.com/maps?q=6.8630289,37.7595453&hl=en&z=17&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.70889230571!2d37.7569704!3d6.8630342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17b1b083bf37f165%3A0xb8de2aac2c40782c!2sGreen%20Land%20Hotel!5e0!3m2!1sen!2set!4v1710000000000!5m2!1sen!2set"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full grayscale-[20%] contrast-[105%]"
+                className="w-full h-full"
               />
               <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-4 py-2 rounded-xl border border-neutral-200 text-xs font-mono font-bold text-neutral-900 shadow-lg flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
                 <span>📍 Green Land Hotel / Greenland Sefer, Sodo</span>
               </div>
+              <a
+                href={googleMapsUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="absolute bottom-4 right-4 bg-neutral-900/90 backdrop-blur-md text-white px-4 py-2 rounded-xl border border-neutral-800 text-xs font-bold shadow-xl hover:bg-neutral-800 transition-colors flex items-center gap-1.5"
+              >
+                <ExternalLink className="w-3.5 h-3.5 text-[#C5A880]" />
+                Open Full Screen Map
+              </a>
             </div>
 
             {/* Navigation Directions Cards */}
